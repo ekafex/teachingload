@@ -16,6 +16,7 @@ It provides a simple interface for non-technical staff to edit the teaching data
 - **CSV import/export** for backups or bulk editing
 
 
+
 ## Requirements
 
 - **Python 3.11** or newer (works on Windows, Linux, macOS)  
@@ -27,15 +28,15 @@ pandas>=2.2
 numpy>=1.26
 sqlalchemy>=2.0
 altair>=5.0
-
+```
 
 
 ## Installation
 
 1. **Install Python**
 
-   * Download from [python.org](https://www.python.org/downloads/windows/).
-   * Use the **64-bit installer**, tick **“Add Python to PATH”**, and install.
+   * Download Python (downlod directly from [python.org](https://www.python.org/downloads/ or from Anaconda etc.)
+   * If manual installation, use the **64-bit installer**, and tick **“Add Python to PATH”**, and install.
    * Verify in Command Prompt:
 
      ```bat
@@ -45,16 +46,11 @@ altair>=5.0
 2. **Get the app**
 
    * Clone this repo or download the `teachload` folder.
-   * Example location (Windows): `C:\Users\YourName\Documents\teachload`.
+   * Example in windows location: `C:\Users\YourName\Documents\teachload`.
 
 3. **Install requirements**
    Open Command Prompt, navigate into the app folder, and install dependencies:
 
-  ```bash
-  pip install -r requirements.txt
-   ```
-
-  Windows:
    ```bat
    cd C:\Users\YourName\Documents\teachload\app
    python -m pip install --upgrade pip
@@ -70,6 +66,7 @@ altair>=5.0
    Your browser will open [http://localhost:8501](http://localhost:8501).
 
 
+
 ## Usage Workflow
 
 1. **DB Edit** → Add or update Programs, Courses, Sections, People.
@@ -82,6 +79,7 @@ altair>=5.0
    * Instructor loads (table + bar chart)
 
 > Pages 5️⃣ Constraints and 6️⃣ Optimize are placeholders for future features.
+
 
 
 ## Database Preparation
@@ -160,16 +158,17 @@ Once these basics are in place, you can assign instructors, schedule timeslots, 
 * **Results dashboard**
 
 
-## Notes
+##  Notes
 
-* The app works on a local database (`teaching_load.db`).
-* You can export/import CSVs for backup or manual editing.
-* The app uses a *working copy* of the DB, so experiments won’t affect the original data.
+* The app always works on a *working copy* of the DB (`teaching_load.db`), so you can experiment safely.
+* Export/import CSVs regularly to keep backups.
+* Works fully offline — no external server required.
 
 
 ## Contributing
 
 Pull requests and suggestions are welcome! Please open an issue to discuss major changes.
+
 
 ## License
 
